@@ -1,0 +1,40 @@
+<app-header (navigateToSection)="scrollToSection($event)"></app-header>
+<section class="container" id="home">
+    <!-- <div class="intro">
+            <h1>Hi, I'm <br><span>Jamshed Ahmad</span></h1>
+            <p>An Angular, ReactJS, and NextJS Developer with 4 years and 9 months of experience in front-end and full-stack
+                development. I specialize in responsive UI development, reusable component building, and delivering
+                enterprise-grade applications using modern JavaScript frameworks. Currently working at HCLTech Noida.</p>
+            <button>Get In Touch</button>
+        </div> -->
+
+    <div class="intro">
+        <h1>
+            Hi, I'm <br /><span>Jamshed Ahmad</span>
+        </h1>
+        <p>
+            I'm a <span class="typed-text"></span>
+        </p>
+
+        <p>An Angular, ReactJS, and NextJS Developer with 4 years and 9 months of experience in front-end and full-stack
+            development. I specialize in responsive UI development, reusable component building, and delivering
+            enterprise-grade applications using modern JavaScript frameworks. Currently working at HCLTech Noida.</p>
+        <button>Get In Touch</button>
+    </div>
+
+
+
+    <div class="image-container">
+        <img src="../../../assets/image/profile.jpeg" alt="Jamshed Ahmad" data-aos="zoom-in">
+    </div>
+</section>
+<app-skills id="skill"></app-skills>
+<div id="about"><app-about></app-about></div>
+<div id="experience"><app-experience></app-experience></div>
+<div id="education"><app-education></app-education></div>
+<div id="projects"><app-projects></app-projects></div>
+<div id="contact"><app-contact></app-contact></div>
+<div id="tech"><app-ttech-stack></app-ttech-stack></div>
+<app-testimonials></app-testimonials>
+
+<app-footer></app-footer>

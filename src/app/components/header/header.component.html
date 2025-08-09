@@ -1,0 +1,14 @@
+<header>
+    <div class="logo">Jamshed Ahmad</div>
+    <div class="menu-toggle" (click)="toggleMenu()">&#9776;</div>
+    <nav>
+        <a href="#" [class.active]="activeSection === 'home'" (click)="scrollTo('home', $event)">Home</a>
+        <a href="#" [class.active]="activeSection === 'skill'" (click)="scrollTo('skill', $event)">Skills</a>
+        <a href="#" [class.active]="activeSection === 'about'" (click)="scrollTo('about', $event)">About</a>
+        <a href="#" [class.active]="activeSection === 'experience'" (click)="scrollTo('experience', $event)">Experience</a>
+        <a  [class.active]="activeSection === 'education'" (click)="scrollTo('education', $event)">Education</a>
+        <a  [class.active]="activeSection === 'projects'" (click)="scrollTo('projects', $event)">Projects</a>
+        <a  [class.active]="activeSection === 'contact'"(click)="scrollTo('contact', $event)">Contact</a>
+        <a href="/assets/Jamshed-Ahmad-CV.pdf" download>Resume ⬇</a>
+    </nav>
+</header>

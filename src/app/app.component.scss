@@ -1,0 +1,46 @@
+.scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    z-index: 9999;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #10b981, #3ee577);
+    transition: width 0.2s ease-out;
+    width: 0%;
+    border-radius: 0 2px 2px 0;
+}
+
+.scroll-progress-container {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-progress-container.active {
+    opacity: 1;
+}
+
+.scroll-progress-bar {
+    border-radius: 2px;
+}
+
+.scroll-progress-bar {
+    background: linear-gradient(270deg, #10b981, #3ee577);
+    background-size: 200% 200%;
+    animation: gradientMove 4s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
