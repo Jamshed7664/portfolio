@@ -1,11 +1,11 @@
 .about-section {
     background: #0f172a;
-    padding: 80px 10%;
+    padding: 50px 10%;
     justify-content: space-between;
     gap: 40px;
     flex-wrap: wrap;
     color: #ffffff !important;
-    min-height: 100vh;
+    min-height: 100%;
     align-items: center;
 }
 
@@ -45,7 +45,7 @@ content: "";
 .skills {
     flex: 1 1 45%;
     background: #1c2331;
-    padding: 30px;
+    // padding: 30px;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 227, 194, 0.1);
     height: fit-content;
@@ -91,4 +91,8 @@ content: "";
     .skill-card {
         flex: 1 1 100%;
     }
+        .about-section {
+            padding: 40px 10%;
+            
+        }
 }

@@ -7,8 +7,10 @@
 
 body {
     background: linear-gradient(135deg, #051622, #0B0F2F);
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;;
-    // color: #ffffff;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 /* For Chrome, Edge, and Safari */
@@ -43,8 +45,9 @@ body {
 }
 
 
-.section-title,.timeline-title{
-    color: #10b981 !important;
+.section-title,
+.timeline-title {
+    color: white !important;
 }
 
 .section-title {
