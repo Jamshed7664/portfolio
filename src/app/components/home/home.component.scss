@@ -50,6 +50,7 @@ section.container-fluid::after {
     max-width: 600px;
     flex: 1 1 300px;
     z-index: 1;
+    margin-top: 40px;
 }
 
 .intro h1 {
@@ -183,6 +184,9 @@ button a {
     .intro h1 {
         font-size: 36px;
     }
+        .intro {
+            margin-top: 40px;
+        }
 
     .image-container {
         width: 240px;
