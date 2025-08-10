@@ -1,6 +1,6 @@
 .about-section {
     background: #0f172a;
-    padding: 50px 10%;
+    padding: 50px 10%;   
     justify-content: space-between;
     gap: 40px;
     flex-wrap: wrap;
@@ -74,17 +74,31 @@ content: "";
     gap: 8px;
 }
 
+
+@keyframes fillAnimation {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--skill-width);
+    }
+}
 .skill-bar {
     border-radius: 10px;
     height: 8px;
     overflow: hidden;
     background-color: black;
+    /* remaining bar */
 }
 
 .skill-fill {
     height: 8px;
     border-radius: 10px;
     background: linear-gradient(90deg, #4facfe, #00f2fe);
+    width: 0;
+    /* start empty */
+    transition: width 1.5s ease-out;
 }
 
 @media (max-width: 768px) {
@@ -92,7 +106,7 @@ content: "";
         flex: 1 1 100%;
     }
         .about-section {
-            padding: 40px 10%;
+            // padding: 40px 10%;
             
         }
 }

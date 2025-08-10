@@ -4,7 +4,7 @@
 }
 
 .tech-stack h2 {
-    color: #10b981;
+    // color: #10b981;
     margin-bottom: 40px;
 }
 
@@ -67,4 +67,44 @@
     width: 100px;
     border-radius: 2px;
     background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+.marquee-content {
+    display: flex;
+    animation: scroll-left 20s linear infinite;
+}
+
+.icon-box {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.icon-box img {
+    height: 50px;
+    width: auto;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on hover */
+.marquee:hover .marquee-content {
+    animation-play-state: paused;
 }

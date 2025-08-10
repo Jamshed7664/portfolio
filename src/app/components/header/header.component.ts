@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,15 +8,16 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent {
   isMenuOpen = false;
+  activeSection: string = 'home';
+  hideTopBar = false;
+
+  private lastScrollTop = 0;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  
   @Output() navigateToSection = new EventEmitter<string>();
-
-  activeSection: string = 'home';
 
   scrollTo(section: string, event: Event) {
     event.preventDefault();
@@ -32,9 +33,23 @@ export class HeaderComponent {
         top: offsetPosition,
         behavior: 'smooth'
       });
-    } else {
-      console.warn(`Section '${section}' is not available in the DOM yet.`);
     }
-  } 
-  
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > this.lastScrollTop) {
+      // Scrolling down
+      this.hideTopBar = true;
+    } else {
+      // Scrolling up
+      this.hideTopBar = false;
+    }
+
+    this.lastScrollTop = Math.max(currentScroll, 0);
+  }
 }
+
+

@@ -12,12 +12,14 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HomeComponent } from './components/home/home.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
 import { TtechStackComponent } from './components/ttech-stack/ttech-stack.component';
+import { NgxMarqueeModule } from 'ngx-marquee';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,10 @@ import { TtechStackComponent } from './components/ttech-stack/ttech-stack.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     AlertModule,
-    
+    CarouselModule,
+    BrowserAnimationsModule,
+    NgxMarqueeModule
 
   ],
   providers: [],
