@@ -54,6 +54,62 @@
     /* ensure it's behind timeline items */
 }
 
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    right: -13px;
+    background: #0e0f17;
+    border: 2px solid #3ee577;
+    top: 20px;
+    border-radius: 50%;
+    z-index: 2;
+    /* stays above the glow */
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    right: -13px;
+    top: 20px;
+    border-radius: 50%;
+    background: rgba(62, 229, 119, 0.3);
+    box-shadow: 0 0 15px 5px rgba(62, 229, 119, 0.6);
+    z-index: 1;
+    /* behind the main circle */
+    animation: pulseGlow 1.8s infinite ease-in-out;
+}
+
+.timeline-item.right::after,
+.timeline-item.right::before {
+    left: -18px;
+    right: auto;
+}
+
+/* Bigger, smoother, and more visible pulse */
+@keyframes pulseGlow {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+        box-shadow: 0 0 15px 5px rgba(62, 229, 119, 0.6);
+    }
+
+    50% {
+        transform: scale(2.2);
+        opacity: 0;
+        box-shadow: 0 0 40px 20px rgba(62, 229, 119, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+        box-shadow: 0 0 15px 5px rgba(62, 229, 119, 0.6);
+    }
+}
+
 .timeline-item {
     padding: 20px 30px;
     position: relative;
@@ -137,6 +193,14 @@
         left: 0;
         text-align: left;
     }
+        .timeline-item::before {
+            background: none;
+            box-shadow: none;
+            z-index: 1;
+            animation: none;
+            -webkit-animation: none;
+        }
+    
 }
 
 
@@ -150,4 +214,11 @@
     .timeline-item::after {
             left: 3px !important;
         }
+    .timeline-item::before {
+            background: none;
+            box-shadow: none;
+            z-index: 1;
+            animation: none;
+            -webkit-animation: none;
+    }   
 }

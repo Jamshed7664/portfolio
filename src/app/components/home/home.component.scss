@@ -18,7 +18,7 @@ section.container-fluid {
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
-    min-height: calc(100dvh - 20px);
+    min-height: calc(100vh   - 20px);
     /* subtract navbar height */
     gap: clamp(20px, 5vw, 60px);
     margin-top: 50px;
