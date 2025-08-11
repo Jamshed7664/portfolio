@@ -208,3 +208,36 @@ body {
             -webkit-animation: none;
         }
 }
+
+
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow tags to wrap to next line */
+    gap: 8px;
+    /* Gap between tags (horizontal and vertical) */
+}
+
+.tags span {
+    background-color: #232c4c;
+    color: #10b981;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    position: relative;
+
+    white-space: normal;
+    /* Allow multi-line text if needed */
+    word-break: break-word;
+    /* Break long words to prevent overflow */
+
+    transition: all 0.3s ease;
+    cursor: default;
+    /* Optional: show pointer if needed */
+}
+
+.tags span:hover {
+    transform: translateY(-5px);
+}

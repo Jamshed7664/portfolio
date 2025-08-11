@@ -40,16 +40,44 @@ export class HeaderComponent {
   onWindowScroll() {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
+    // Handle top bar hide/show
     if (currentScroll > this.lastScrollTop) {
-      // Scrolling down
       this.hideTopBar = true;
     } else {
-      // Scrolling up
       this.hideTopBar = false;
     }
-
     this.lastScrollTop = Math.max(currentScroll, 0);
+
+    // Detect active section based on scroll position
+    const sections = [
+      'home',
+      'skill',
+      'about',
+      'experience',
+      'education',
+      'projects',
+      'contact'
+    ];
+
+    let currentActive = this.activeSection;
+    const offset = 100; // Adjust for header height
+
+    for (let section of sections) {
+      const el = document.getElementById(section);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= offset && rect.bottom > offset) {
+          currentActive = section;
+          break;
+        }
+      }
+    }
+
+    if (currentActive !== this.activeSection) {
+      this.activeSection = currentActive;
+    }
   }
+
 }
 
 
