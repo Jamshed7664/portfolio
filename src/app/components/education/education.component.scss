@@ -1,0 +1,224 @@
+.timeline-section {
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+    background-color: #0f172a;
+}
+
+.timeline-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 200px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 0px;
+    background-color: var(--accent);
+    /* same as border in .timeline-item::after */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.2);
+    /* glowing effect */
+    border-radius: 2px;
+    /* subtle rounding like neumorphic design */
+    z-index: 0;
+    /* ensure it's behind timeline items */
+}
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    right: -13px;
+    background: #0e0f17;
+    border: 2px solid #3ee577;
+    top: 20px;
+    border-radius: 50%;
+    z-index: 2;
+    /* stays above the glow */
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    right: -13px;
+    top: 20px;
+    border-radius: 50%;
+    background: rgba(62, 229, 119, 0.3);
+    box-shadow: 0 0 15px 5px rgba(62, 229, 119, 0.6);
+    z-index: 1;
+    /* behind the main circle */
+    animation: pulseGlow 1.8s infinite ease-in-out;
+}
+
+.timeline-item.right::after,
+.timeline-item.right::before {
+    left: -18px;
+    right: auto;
+}
+
+/* Bigger, smoother, and more visible pulse */
+@keyframes pulseGlow {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+        box-shadow: 0 0 15px 5px rgba(62, 229, 119, 0.6);
+    }
+
+    50% {
+        transform: scale(2.2);
+        opacity: 0;
+        box-shadow: 0 0 40px 20px rgba(62, 229, 119, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+        box-shadow: 0 0 15px 5px rgba(62, 229, 119, 0.6);
+    }
+}
+
+.timeline-item {
+    padding: 20px 30px;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    right: -13px;
+    background-color: #0e0f17;
+    border: 2px solid #3ee577;
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.2);
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-item.right::after {
+    left: -18px;
+}
+
+.content {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(62, 229, 119, 0.2);
+    text-align: left;
+    position: relative;
+        transition: all 0.3s ease;
+        p{
+            color: #94a3b8;
+        }
+}
+
+.content h5 {
+    color: #3ee577;
+    margin: 0;
+    font-weight: bold;
+}
+.content:hover {
+    transform: translateY(-5px);
+}
+
+.content h4 {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 25px;
+        margin-bottom: 30px;
+    }
+
+    .timeline-item::after {
+        left: 15px !important;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+        text-align: left;
+    }
+        .timeline-item::before {
+            background: none;
+            box-shadow: none;
+            z-index: 1;
+            animation: none;
+            -webkit-animation: none;
+        }
+    
+}
+
+
+@media (max-width: 600px) {
+    .timeline-item::after {
+            left: 3px !important;
+        }
+}
+@media screen and (max-width: 768px) {
+
+    .timeline-item::after {
+            left: 3px !important;
+        }
+    .timeline-item::before {
+            background: none;
+            box-shadow: none;
+            z-index: 1;
+            animation: none;
+            -webkit-animation: none;
+    }   
+}

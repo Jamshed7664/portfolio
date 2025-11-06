@@ -1,0 +1,117 @@
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #051622, #0B0F2F);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+    width: 6px;
+    /* Thin width */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    /* Transparent track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #10b981;
+    /* Green thumb */
+    border-radius: 10px;
+    /* Rounded edges */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #059669;
+    /* Darker on hover */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    /* Thin scrollbar */
+    scrollbar-color: #10b981 transparent;
+    /* Thumb color + track color */
+}
+
+
+.section-title,
+.timeline-title {
+    color: white !important;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 90px !important;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+
+}
+
+.timeline-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 90px !important;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+
+.btn-grad {
+    background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%)
+}
+
+.btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}

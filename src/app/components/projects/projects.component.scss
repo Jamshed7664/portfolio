@@ -1,0 +1,168 @@
+:root {
+    --accent: #3ee577;
+    --card-bg: #1c2431;
+    --tag-bg: rgba(62, 229, 119, 0.1);
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0e1623;
+    color: #fff;
+}
+
+.projects-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 150px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    position: relative;
+    background-color: #1e293b;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+    transition: left 0.4s ease;
+}
+
+.project-card:hover::before {
+    left: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: white;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #d1d5db;
+    margin-bottom: 16px;
+    color: #94a3b8;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow tags to wrap to next line */
+    gap: 8px;
+    /* Gap between tags (horizontal and vertical) */
+}
+
+.tags span {
+    background-color: #232c4c;
+    color: #10b981;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    position: relative;
+
+    white-space: normal;
+    /* Allow multi-line text if needed */
+    word-break: break-word;
+    /* Break long words to prevent overflow */
+
+    transition: all 0.3s ease;
+    cursor: default;
+    /* Optional: show pointer if needed */
+}
+
+.tags span:hover {
+    transform: translateY(-5px);
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: #0056b3;
+}
+
+
+.btn-grad {
+    background-image: linear-gradient(to right, #5f2c82 0%, #49a09d 51%, #5f2c82 100%)
+}
+
+.btn-grad {
+margin: 10px;
+    padding: 7px 12px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0;
+    box-shadow: none;
+    display: inline;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}

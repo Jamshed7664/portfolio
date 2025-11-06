@@ -1,0 +1,24 @@
+<div class="top-bar" [class.hidden]="hideTopBar">
+    <div class="left-text">
+        <strong>Jamshed Ahmad</strong> | Angular, ReactJS, NextJS Developer (5Y Experience)
+    </div>
+    <div class="right-text">
+        📤 <a href="mailto:jamshed7664@gmail.com">jamshed7664gmail.com</a> &nbsp; | &nbsp; 📞
+        <a href="tel:+918299491705">+91 82994 91705</a>
+    </div>
+</div>
+
+<header [class.shift-up]="hideTopBar" >
+    <div class="logo">Jamshed Ahmad</div>
+    <div class="menu-toggle" (click)="toggleMenu()">&#9776;</div>
+    <nav [class.open]="isMenuOpen">
+        <a [class.active]="activeSection === 'home'" (click)="scrollTo('home', $event)">Home</a>
+        <a [class.active]="activeSection === 'skill'" (click)="scrollTo('skill', $event)">Skills</a>
+        <a [class.active]="activeSection === 'about'" (click)="scrollTo('about', $event)">About</a>
+        <a [class.active]="activeSection === 'experience'" (click)="scrollTo('experience', $event)">Experience</a>
+        <a [class.active]="activeSection === 'education'" (click)="scrollTo('education', $event)">Education</a>
+        <a [class.active]="activeSection === 'projects'" (click)="scrollTo('projects', $event)">Projects</a>
+        <a [class.active]="activeSection === 'contact'" (click)="scrollTo('contact', $event)">Contact</a>
+        <a href="../../../assets/resume/Resume.pdf" download>Resume ⬇</a>
+    </nav>
+</header>
