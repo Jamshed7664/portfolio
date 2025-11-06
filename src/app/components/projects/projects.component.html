@@ -2,9 +2,9 @@
     <h2 class="section-title">Projects</h2>
 
     <div class="project-grid">
-        <div class="project-card" *ngFor="let project of displayedProjects" [attr.data-aos]="project.aos">
+        <div class="project-card" *ngFor="let project of displayedProjects;index as i" [attr.data-aos]="project.aos">
 
-            <h3>{{ project.title }}</h3>
+            <h3><span>{{ i+1 }}. &nbsp;</span>{{ project.title }}</h3>
             <p>{{ project.description }}</p>
 
             <div class="tags">
