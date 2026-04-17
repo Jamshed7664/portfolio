@@ -20,6 +20,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
 import { TtechStackComponent } from './components/ttech-stack/ttech-stack.component';
 import { NgxMarqueeModule } from 'ngx-marquee';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { NgxMarqueeModule } from 'ngx-marquee';
     AlertModule,
     CarouselModule,
     BrowserAnimationsModule,
-    NgxMarqueeModule
+    NgxMarqueeModule,
+    
 
   ],
   providers: [],
