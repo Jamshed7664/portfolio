@@ -12,7 +12,7 @@ A modern, responsive, and interactive developer portfolio built with **Angular**
 
 ## 📺 Demo Video
 
-▶️ https://youtube.com/your-video-link
+▶️ https://youtu.be/g8f0p2H5RQY?si=qF4Era6mYW6K3RnT
 
 ---
 
